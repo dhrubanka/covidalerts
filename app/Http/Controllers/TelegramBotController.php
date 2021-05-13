@@ -153,7 +153,7 @@ class TelegramBotController extends Controller
         ]);
         $available_centers = json_decode($response->getBody());
         $available_centers = $available_centers->sessions;
-        ddd($available_centers);
+      //  ddd($available_centers);
         foreach($available_centers as $center){
           //  ddd($center->center_id);
             $text = "Notification for ".$center->district_name."\n"
