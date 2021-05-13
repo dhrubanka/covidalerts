@@ -22,3 +22,4 @@ Route::get('/updated-activity', [TelegramBotController::class , 'updatedActivity
 Route::get('/send-message', [TelegramBotController::class, 'storeMessage']);
 Route::get('/send-sivsagar', [TelegramBotController::class, 'sendToSivsagar']);
 Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
+Route::get('/send-dibrugarh', [TelegramBotController::class, 'sendToDibrugarh']);
