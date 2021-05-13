@@ -149,7 +149,7 @@ class TelegramBotController extends Controller
         ])->get('https://www.cowin.gov.in/api/v2/appointment/sessions/public/findByDistrict',
         [
             'district_id' => '043',
-            'date' => '13-05-2021',
+            'date' => date("d-m-Y", strtotime("+1 day")),
         ]);
         $available_centers = json_decode($response->getBody());
         $available_centers = $available_centers->sessions;
