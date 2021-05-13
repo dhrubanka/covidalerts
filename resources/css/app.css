@@ -76,3 +76,7 @@ header {
 .text-container-grid .col-md p {
     font-size: 30px;
 }
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
