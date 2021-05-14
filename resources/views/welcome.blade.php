@@ -82,12 +82,12 @@
         <div class="container banner-text">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Get Notified in the blink of an eye!</h1>
+                    <h1 style="font-weight:560;">Get Notified in the blink of an eye!</h1>
                     <p>Having trouble scheduling your vaccination appointment???
                     <br>Don't Worry..
                     <br>Our Telegram bot will keep you in the loop.</p>
                     <br>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#district-modal"><button class="joinButton">Find Channel</button></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#district-modal"><button class="joinButton" style="font-weight:900;" >Find Channel</button></a>
                 </div>
             </div>
         </div>
