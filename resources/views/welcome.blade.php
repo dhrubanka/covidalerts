@@ -53,7 +53,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="nav-link">ABOUT</a>
+                            <a href="/about" class="nav-link">ABOUT</a>
                         </li>
 
                         <li>

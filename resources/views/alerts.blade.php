@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="/css/alerts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <title>Covid Alerts | Alerts Page</title>
   </head>
   <body>
@@ -53,7 +55,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="nav-link">ABOUT</a>
+                            <a href="/about" class="nav-link">ABOUT</a>
                         </li>
 
                         <li>
@@ -127,14 +129,14 @@
                                                     </div>
                                                     <div class="card-info">
                                                         <span class="info-title">Above 45 Channels (Coming Soon)</span>
-                                                        <span class="info-update">Last update - 12:00 to 13.30 Hrs</span>
+                                                        <span class="info-update">Coming soon</span>
                                                     </div>
                                                 </div>
                                                 <ul class="card-ul-list" style="list-style-type: none; padding: 10px;">
                                                     <li class="card-list"><span>
                                                         <select class="form-select" aria-label="Default select example" onchange="setAboveLink(this.value)" >
                                                             <option selected value="">Select your district</option>
-                                                            <option value="#">Dibrugarh</option>
+
 
                                                           </select>
                                                     </span></li>

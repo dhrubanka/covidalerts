@@ -32,13 +32,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/about.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <title>Covid Alerts | Contacts Page</title>
+    <title>Covid Alerts | About Page</title>
   </head>
   <body>
 
@@ -70,23 +69,17 @@
     </header>
     <!-- Navbar End-Region -->
 
-    <section class="banner">
+    <section class="banner" style="padding-top: 13em;">
         <div class="container banner-text animated fadeIn">
             <div class="row">
                 <div class="col-sm-12">
                     <!--  <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> -->
-                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dhrubanka&ensp;(Creator)</h2>
-                    <a href="https://twitter.com/dhrubanka7" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
-                    <a href="https://www.facebook.com/idhrubanka/" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a>
 
-
-                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Debayan&ensp;(Team Member)</h2>
-                    <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
-                    <a href="https://www.facebook.com/debayan.chakravorty" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a>
-
-
-                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mridul&ensp;(Made the website)</h2>
-                    <a href="https://twitter.com/mridul1024" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
+                   <p>
+                       Vaccine slots are made open for booking at different times of the day and the slots are being booked very quickly. This creates a problem as people can't stay online all the time of the day as a result people tend to miss the first step towards the vaccination process.
+                   <br><br> &nbsp We made a bot that notifies you whenever slots are opened for booking via <a href="https://telegram.org/" style="color: white" target="_blank">Telegram</a>.
+                    <br>(Currently available only for Assam's districts.)
+                </p>
                 </div>
             </div>
         </div>

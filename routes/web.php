@@ -25,6 +25,11 @@ Route::get('/contact', function(){
 
     return view('contact');
 });
+Route::get('/about', function(){
+
+    return view('about');
+});
+
 Route::get('/updated-activity', [TelegramBotController::class , 'updatedActivity']);
 Route::get('/send-message', [TelegramBotController::class, 'storeMessage']);
 Route::get('/send-sivsagar', [TelegramBotController::class, 'sendToSivsagar']);
