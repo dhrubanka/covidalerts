@@ -81,7 +81,6 @@
 
 
                     <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Debayan&ensp;(Team Member)</h2>
-                    <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
                     <a href="https://www.facebook.com/debayan.chakravorty" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a>
 
 

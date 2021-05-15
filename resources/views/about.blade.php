@@ -56,11 +56,11 @@
                         </li>
 
                         <li>
-                            <a href="/about" class="nav-link">ABOUT</a>
+                            <a href="/about" class="nav-link active">ABOUT</a>
                         </li>
 
                         <li>
-                            <a href="/contact" class="nav-link active">CONTACT</a>
+                            <a href="/contact" class="nav-link">CONTACT</a>
                         </li>
                     </ul>
                 </div>

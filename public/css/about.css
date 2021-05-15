@@ -1,4 +1,8 @@
-
+@media only screen and (min-width: 992px) {
+    body {
+    overflow-y: hidden;
+}
+}
 
 p{
     font-family: 'Open Sans', sans-serif;
