@@ -75,7 +75,7 @@
                     <!--  <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> -->
                     <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dhrubanka&ensp;(Creator)</h2>
                     <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a> <a href="#" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a> <a href="#" target="_blank"><img src="/img/TelegramIconTwo.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
-                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Team Members&ensp;(Maintainer)</h2>
+                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Debayan&ensp;(Team Member)</h2>
                     <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a> <a href="#" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a> <a href="#" target="_blank"><img src="/img/TelegramIconTwo.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
                     <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mridul&ensp;(Made the website)</h2>
                     <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
