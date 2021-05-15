@@ -34,7 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <title>Covid Alerts</title>
+    <title>Covid Alerts - Vaccine Slot Notifications via Telegam</title>
   </head>
   <body>
 

@@ -49,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navBarMobileToggle">
                     <ul class="navbar-nav text-center ms-auto">
                         <li>
-                            <a href="index" class="nav-link">HOME</a>
+                            <a href="/" class="nav-link">HOME</a>
                         </li>
 
                         <li>
@@ -67,7 +67,7 @@
     <!-- Navbar End-Region -->
 
     <!-- Alert Card Start-Region -->
-    <section class="alerts" style="padding-top: 8em;">
+    <section class="alerts" >
         <div class="container banner-text animated slideInDown">
 
                 <div id="card-container" class="container">
@@ -100,7 +100,7 @@
                                                     <option value="https://telegram.me/sivasagarCA18">Sivasagar</option>
                                                     <option value="https://telegram.me/dhemajiCA18 ">Dhemaji</option>
                                                     <option value="https://telegram.me/sonitpurCA18">Sonitpur</option>
-
+                                                    <option value="https://telegram.me/kamrupruralCA18">Kamrup Rural</option>
                                                   </select>
                                             </span></li>
                                         </ul>
