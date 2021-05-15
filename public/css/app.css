@@ -2,14 +2,13 @@
 
 .banner {
     position: relative;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url(/img/background_blur_resized.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.4)), url(/img/background_no_clouds_resized_blurred.jpg);
     height: 100%;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     padding: 230px 0 230px;
 }
-
 
 #logo {
     height: 40px;
@@ -62,17 +61,7 @@ header {
     box-shadow:         10px 6px 12px 0px rgba(50, 50, 50, 0.39);
 }
 
-.text-container-grid {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    padding: 50px;
-    text-align: center;
-}
+p{
+    font-family: 'Open Sans', sans-serif;
 
-#floatingSelectGrid {
-    cursor:pointer;
-}
-
-.text-container-grid .col-md p {
-    font-size: 30px;
 }

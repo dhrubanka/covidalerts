@@ -17,7 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/alerts', function(){
 
+    return view('alerts');
+});
+Route::get('/contact', function(){
+
+    return view('contact');
+});
 Route::get('/updated-activity', [TelegramBotController::class , 'updatedActivity']);
 Route::get('/send-message', [TelegramBotController::class, 'storeMessage']);
 Route::get('/send-sivsagar', [TelegramBotController::class, 'sendToSivsagar']);

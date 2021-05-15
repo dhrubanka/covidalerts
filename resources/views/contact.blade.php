@@ -5,36 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <meta name="description" content="Telegram notification bot">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="CovidAlerts">
     <meta itemprop="description" content="Telegram notification bot">
-    <meta itemprop="image" content="https://covidalerts.online/img/seohome.png">
+    <meta itemprop="image" content="https://covidalerts.online/img/seocontacts.png">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://covidalerts.online">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CovidAlerts">
     <meta property="og:description" content="Telegram notification bot">
-    <meta property="og:image" content="https://covidalerts.online/img/seohome.png">
+    <meta property="og:image" content="https://covidalerts.online/img/seocontacts.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CovidAlerts">
     <meta name="twitter:description" content="Telegram notification bot">
-    <meta name="twitter:image" content="https://covidalerts.online/img/seohome.png">
+    <meta name="twitter:image" content="https://covidalerts.online/img/seocontacts.png">
+
+
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/contact.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <title>Covid Alerts</title>
+    <title>Covid Alerts | Contacts Page</title>
   </head>
   <body>
 
@@ -49,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navBarMobileToggle">
                     <ul class="navbar-nav text-center ms-auto">
                         <li>
-                            <a href="/" class="nav-link active">HOME</a>
+                            <a href="/" class="nav-link">HOME</a>
                         </li>
 
                         <li>
@@ -57,7 +59,7 @@
                         </li>
 
                         <li>
-                            <a href="/contact" class="nav-link">CONTACT</a>
+                            <a href="/contact" class="nav-link active">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -66,22 +68,22 @@
     </header>
     <!-- Navbar End-Region -->
 
-
-    <section id="banner" class="banner">
+    <section class="banner">
         <div class="container banner-text animated fadeIn">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 style="font-weight:560;">Get Notified in the blink of an eye!</h1>
-                    <p>Having trouble scheduling your vaccination appointment???
-                    <br>Don't worry..
-                    <br>Our telegram bot will keep you in the loop.</p>
-                    <br>
-                    <!-- data-bs-toggle="modal" data-bs-target="#district-modal" -->
-                    <a href="alerts"><button class="joinButton" style="font-weight:900;" >FIND CHANNEL</button></a>
+                    <!--  <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> <i style="font-size: 40px; padding-right: 5px;" class="fa fa-twitter-square" aria-hidden="true"></i> -->
+                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dhrubanka&ensp;(Creator)</h2>
+                    <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a> <a href="#" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a> <a href="#" target="_blank"><img src="/img/TelegramIconTwo.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
+                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dhrubanka's Friend&ensp;(Maintainer)</h2>
+                    <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a> <a href="#" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a> <a href="#" target="_blank"><img src="/img/TelegramIconTwo.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
+                    <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mridul&ensp;(Made the website)</h2>
+                    <a href="#" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

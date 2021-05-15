@@ -1,0 +1,13 @@
+body {
+    overflow-y: hidden;
+}
+
+h2 {
+    font-size: 20px; 
+    margin-top: 30px;
+}
+
+.col-sm-12 a img:hover {
+    transform: rotate(360deg);
+    transition: 0.8s ease;
+}
