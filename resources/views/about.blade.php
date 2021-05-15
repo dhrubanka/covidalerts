@@ -77,7 +77,7 @@
 
                    <p>
                        Vaccine slots are made open for booking at different times of the day and the slots are being booked very quickly. This creates a problem as people can't stay online all the time of the day as a result people tend to miss the first step towards the vaccination process.
-                   <br><br> &nbsp We made a bot that notifies you whenever slots are opened for booking via <a href="https://telegram.org/" style="color: white" target="_blank">Telegram</a>.
+                   <br><br>  We made a bot that notifies you whenever slots are opened for booking via <a href="https://telegram.org/" style="color: white" target="_blank">Telegram</a>.
                     <br>(Currently available only for Assam's districts.)
                 </p>
                 </div>
