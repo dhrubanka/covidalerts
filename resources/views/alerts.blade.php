@@ -86,7 +86,7 @@
                                                 <img src="/img/TelegramIcon.png" alt="telegram_icon" style="width: 50px; height: 50px;">
                                             </div>
                                             <div class="card-info">
-                                                <span class="info-title">Under 45 Channels</span>
+                                                <span class="info-title">All age groups </span>
                                                 <span class="info-update">More Districts to be added soon</span>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@
                                                         <img src="/img/TelegramIcon.png" alt="telegram_icon" style="width: 50px; height: 50px;">
                                                     </div>
                                                     <div class="card-info">
-                                                        <span class="info-title">Above 45 Channels</span>
+                                                        <span class="info-title">Above 45 Channels (Coming Soon)</span>
                                                         <span class="info-update">Last update - 12:00 to 13.30 Hrs</span>
                                                     </div>
                                                 </div>
@@ -134,7 +134,7 @@
                                                     <li class="card-list"><span>
                                                         <select class="form-select" aria-label="Default select example" onchange="setAboveLink(this.value)" >
                                                             <option selected value="">Select your district</option>
-                                                            <option value="https://mridulsharma.com">Dibrugarh</option>
+                                                            <option value="#">Dibrugarh</option>
 
                                                           </select>
                                                     </span></li>
