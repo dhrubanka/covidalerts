@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCenterTrackingTable extends Migration
+class CreateCenterTrackingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,14 @@ class CreateCenterTrackingTable extends Migration
      */
     public function up()
     {
-        Schema::create('center_tracking', function (Blueprint $table) {
+        Schema::create('center_trackings', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('stateid');
+            $table->bigInteger('districtid');
+            $table->bigInteger('centerid');
+            $table->string('name');
+            $table->date('date');
+            $table->integer('capacity');
             $table->timestamps();
         });
     }

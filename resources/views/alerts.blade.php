@@ -103,6 +103,10 @@
                                                     <option value="https://telegram.me/dhemajiCA18 ">Dhemaji</option>
                                                     <option value="https://telegram.me/sonitpurCA18">Sonitpur</option>
                                                     <option value="https://telegram.me/kamrupruralCA18">Kamrup Rural</option>
+                                                    <option value="https://telegram.me/joinchat/OoiD68jRRFRlNzFl">Lakhimpur</option>
+                                                    <option value="https://telegram.me/joinchat/b6MR0phezg1mMjI1">Tinsukia</option>
+                                                    <option value="https://telegram.me/joinchat/kz7X17M6-jJhZDc1">Golaghat</option>
+                                                    <option value="https://telegram.me/joinchat/IX4JwRFMcEhjYTBl">Majuli</option>
                                                   </select>
                                             </span></li>
                                         </ul>
