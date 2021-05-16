@@ -239,8 +239,8 @@ class TelegramBotController extends CenterTrackingController
          .$available_capacity
          . "\n<b>Fee type  : </b>"
          .$fee_type
-         ."\n\nFrom : CovidAlerts.online Bot
-         \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya Setu App (No captcha)";
+         ."\n\nUpdates From ~ CovidAlerts.online
+         \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya Setu App ";
 
     }
 }
