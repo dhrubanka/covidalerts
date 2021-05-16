@@ -9,6 +9,8 @@ use App\Models\Center_tracking;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\CenterTrackingController;
 
+use function PHPUnit\Framework\isEmpty;
+
 class TelegramBotController extends CenterTrackingController
 {
     public function updatedActivity()
@@ -129,6 +131,8 @@ class TelegramBotController extends CenterTrackingController
     public function sendToWestKarbi(Request $request)
     {
         $this->BuildResponse('769', env('TELEGRAM_CHANNEL_WESTKARBI_ID',''));
+
+
     //     $response =  Http::withHeaders([
     //         'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
     //     ])->get('https://www.cowin.gov.in/api/v2/appointment/sessions/public/findByDistrict',
@@ -138,37 +142,45 @@ class TelegramBotController extends CenterTrackingController
     //     ]);
     //     $available_centers = json_decode($response->getBody());
     //     $available_centers = $available_centers->sessions;
+
     //   //  ddd($available_centers);
+
     //     foreach($available_centers as $center){
-    //         var_dump($center->center_id);
-    //         $centerdata=  DB::table('center_trackings')->where('centerid','=', $center->center_id)->get();
-    //         //ddd($centerdata);
-    //         if($centerdata==NULL){
-    //             $originalDate = $center->date;
-    //             $newDate = date("Y-m-d", strtotime($originalDate));
 
-    //             $this->store(4,769,$center->center_id, $center->name, $newDate, $center->available_capacity);
+    //        // var_dump($center->center_id);
+
+    //         $centerdata=  DB::table('center_trackings')
+    //         ->where('centerid','=', $center->center_id)
+    //         ->where('date','=', date("Y-m-d", strtotime($center->date)) )
+    //         ->get();
+
+    //         //storing if first entry for the date
+    //         if($centerdata->isEmpty()){
+    //            // echo "from null";
+    //             //ddd($centerdata);
+    //             $this->store(4,769,$center->center_id, $center->name, date("Y-m-d", strtotime($center->date)), $center->available_capacity);
+
+
+    //              //ddd($center->center_id);
+
+    //             $text = $this->contentbuilder($center->district_name,$center->min_age_limit,$center->name,$center->address,
+    //             $center->date,$center->vaccine,$center->available_capacity,$center->fee_type);
+
+    //             if($center->min_age_limit>44){
+    //             Telegram::sendMessage([
+    //                         'chat_id' => env('TELEGRAM_CHANNEL_WESTKARBI_ID',''),
+    //                         'parse_mode' => 'HTML',
+    //                         'text' => $text
+    //                     ]);
+    //                 }else{
+
+    //                     Telegram::sendMessage([
+    //                         'chat_id' => env('TELEGRAM_CHANNEL_WESTKARBI_ID',''),
+    //                         'parse_mode' => 'HTML',
+    //                         'text' => $text
+    //                     ]);
+    //                 }
     //         }
-
-    //       //ddd($center->center_id);
-
-    //         $text = $this->contentbuilder($center->district_name,$center->min_age_limit,$center->name,$center->address,
-    //         $center->date,$center->vaccine,$center->available_capacity,$center->fee_type);
-
-    //         if($center->min_age_limit>44){
-    //          Telegram::sendMessage([
-    //                     'chat_id' => env('TELEGRAM_CHANNEL_WESTKARBI_ID',''),
-    //                     'parse_mode' => 'HTML',
-    //                     'text' => $text
-    //                 ]);
-    //             }else{
-
-    //                 Telegram::sendMessage([
-    //                     'chat_id' => env('TELEGRAM_CHANNEL_WESTKARBI_ID',''),
-    //                     'parse_mode' => 'HTML',
-    //                     'text' => $text
-    //                 ]);
-    //             }
     //     }
 
     }
@@ -186,16 +198,28 @@ class TelegramBotController extends CenterTrackingController
         //ddd($available_centers);
         foreach($available_centers as $center){
           //  ddd($center->center_id);
-        $text = $this->contentbuilder($center->district_name,$center->min_age_limit,$center->name,$center->address,
-                    $center->date,$center->vaccine,$center->available_capacity,$center->fee_type);
 
-       if($center->available_capacity>10){
-             Telegram::sendMessage([
-                        'chat_id' => $chatid,
-                        'parse_mode' => 'HTML',
-                        'text' => $text
-                    ]);
-             }
+          $centerdata=  DB::table('center_trackings')
+          ->where('centerid','=', $center->center_id)
+          ->where('date','=', date("Y-m-d", strtotime($center->date)) )
+          ->get();
+
+        if($centerdata->isEmpty()){
+            // echo "from null";
+             //ddd($centerdata);
+            $this->store(4,$districtid,$center->center_id, $center->name, date("Y-m-d", strtotime($center->date)), $center->available_capacity);
+
+            $text = $this->contentbuilder($center->district_name,$center->min_age_limit,$center->name,$center->address,
+                        $center->date,$center->vaccine,$center->available_capacity,$center->fee_type);
+
+            if($center->available_capacity>5){
+                Telegram::sendMessage([
+                            'chat_id' => $chatid,
+                            'parse_mode' => 'HTML',
+                            'text' => $text
+                        ]);
+                }
+            }
         }
     }
     public function contentbuilder($district_name,$min_age_limit,$name,$address,$date,$vaccine,$available_capacity,$fee_type){
