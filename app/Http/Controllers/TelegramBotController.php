@@ -191,7 +191,7 @@ class TelegramBotController extends CenterTrackingController
         ])->get('https://www.cowin.gov.in/api/v2/appointment/sessions/public/findByDistrict',
         [
             'district_id' => $districtid,
-            'date' => date("d-m-Y", strtotime("+1 day")) ,
+            'date' => date("d-m-Y", strtotime("+2 day")) ,
         ]);
         $available_centers = json_decode($response->getBody());
         $available_centers = $available_centers->sessions;
@@ -240,7 +240,7 @@ class TelegramBotController extends CenterTrackingController
          . "\n<b>Fee type  : </b>"
          .$fee_type
          ."\n\nUpdates From ~ CovidAlerts.online
-         \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya Setu App ";
+         \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya setu App ";
 
     }
 }

@@ -31,9 +31,9 @@ Route::get('/about', function(){
 });
 
 Route::get('/updated-activity', [TelegramBotController::class , 'updatedActivity']);
+
 Route::get('/send-message', [TelegramBotController::class, 'storeMessage']);
 Route::get('/send-sivsagar', [TelegramBotController::class, 'sendToSivsagar']);
-Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
 Route::get('/send-dibrugarh', [TelegramBotController::class, 'sendToDibrugarh']);
 Route::get('/send-jorhat', [TelegramBotController::class, 'sendToJorhat']);
 Route::get('/send-dhemaji', [TelegramBotController::class, 'sendToDhemaji']);
@@ -43,3 +43,5 @@ Route::get('/send-lakhimpur', [TelegramBotController::class, 'sendToLakhimpur'])
 Route::get('/send-tinsukia', [TelegramBotController::class, 'sendToTinsukia']);
 Route::get('/send-golaghat', [TelegramBotController::class, 'sendToGolaghat']);
 Route::get('/send-majuli', [TelegramBotController::class, 'sendToMajuli']);
+
+Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
