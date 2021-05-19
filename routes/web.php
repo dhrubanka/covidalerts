@@ -45,3 +45,12 @@ Route::get('/send-golaghat', [TelegramBotController::class, 'sendToGolaghat']);
 Route::get('/send-majuli', [TelegramBotController::class, 'sendToMajuli']);
 
 Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
+
+
+
+
+
+
+
+
+
