@@ -314,7 +314,7 @@ class TelegramBotController extends CenterTrackingController
 
 
 
-                    if ($somedate->available_capacity > 0) {
+                    if ($somedate->available_capacity > 1) {
                         // if ($somedate->min_age_limit > 44) {
 
                             $text = $this->contentbuilder(
