@@ -332,7 +332,7 @@ class TelegramBotController extends CenterTrackingController
                     }
                 }
                 //ddd($centerdata);
-                if ($centerdata->isNotEmpty() && ($somedate->available_capacity > $centerdata[0]->capacity)) {
+                if (($centerdata->isNotEmpty()) && (($somedate->available_capacity > 1) && ($somedate->available_capacity > $centerdata[0]->capacity))) {
 
 
 
