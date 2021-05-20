@@ -107,6 +107,14 @@
                                                     <option value="https://telegram.me/joinchat/b6MR0phezg1mMjI1">Tinsukia</option>
                                                     <option value="https://telegram.me/joinchat/kz7X17M6-jJhZDc1">Golaghat</option>
                                                     <option value="https://telegram.me/joinchat/IX4JwRFMcEhjYTBl">Majuli</option>
+                                                    <option value="https://telegram.me/nalbariCA18">Nalbari</option>
+                                                    <option value="https://telegram.me/nagaonCA18">Nagaon</option>
+                                                    <option value="https://telegram.me/darrangCA18">Darrang</option>
+                                                    <option value="https://telegram.me/joinchat/HPf5iO88t_83YmI1">Udalguri</option>
+                                                    <option value="https://telegram.me/joinchat/obpgn4hLIyg4ZGM1">Cachar</option>
+                                                    <option value="https://telegram.me/joinchat/fEQ_S3r81TZjZDQ9">Chirang</option>
+                                                    <option value="https://telegram.me/joinchat/H8MczgjAlylkMTFl">Biswanath</option>
+                                                    <option value="https://telegram.me/joinchat/r4GJ3ZhSfhNjNDg9">Baksa</option>
                                                   </select>
                                             </span></li>
                                         </ul>

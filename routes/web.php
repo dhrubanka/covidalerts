@@ -43,6 +43,15 @@ Route::get('/send-lakhimpur', [TelegramBotController::class, 'sendToLakhimpur'])
 Route::get('/send-tinsukia', [TelegramBotController::class, 'sendToTinsukia']);
 Route::get('/send-golaghat', [TelegramBotController::class, 'sendToGolaghat']);
 Route::get('/send-majuli', [TelegramBotController::class, 'sendToMajuli']);
+Route::get('/send-baksa', [TelegramBotController::class, 'sendToBaksa']);
+Route::get('/send-biswanath', [TelegramBotController::class, 'sendToBiswanath']);
+Route::get('/send-chirang', [TelegramBotController::class, 'sendToChirang']);
+Route::get('/send-cachar', [TelegramBotController::class, 'sendToCachar']);
+Route::get('/send-udalguri', [TelegramBotController::class, 'sendToUdalguri']);
+Route::get('/send-darrang', [TelegramBotController::class, 'sendToDarrang']);
+Route::get('/send-nalbari', [TelegramBotController::class, 'sendToNalbari']);
+Route::get('/send-nagaon', [TelegramBotController::class, 'sendToNagaon']);
+
 
 Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
 

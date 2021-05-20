@@ -93,6 +93,46 @@ class TelegramBotController extends CenterTrackingController
         $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID', ''));
       //  $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID2', ''));
     }
+    public function sendToNagaon(Request $request)
+    {
+        $this->BuildResponse('056', env('TELEGRAM_CHANNEL_NAGAON_ID', ''));
+
+    }
+    public function sendToNalbari(Request $request)
+    {
+        $this->BuildResponse('052', env('TELEGRAM_CHANNEL_NALBARI_ID', ''));
+
+    }
+    public function sendToDarrang(Request $request)
+    {
+        $this->BuildResponse('048', env('TELEGRAM_CHANNEL_DARRANG_ID', ''));
+
+    }
+    public function sendToUdalguri(Request $request)
+    {
+        $this->BuildResponse('065', env('TELEGRAM_CHANNEL_UDALGURI_ID', ''));
+
+    }
+    public function sendToCachar(Request $request)
+    {
+        $this->BuildResponse('066', env('TELEGRAM_CHANNEL_CACHAR_ID', ''));
+
+    }
+    public function sendToChirang(Request $request)
+    {
+        $this->BuildResponse('058', env('TELEGRAM_CHANNEL_CHIRANG_ID', ''));
+
+    }
+    public function sendToBiswanath(Request $request)
+    {
+        $this->BuildResponse('765', env('TELEGRAM_CHANNEL_BISWANATH_ID', ''));
+
+    }
+    public function sendToBaksa(Request $request)
+    {
+        $this->BuildResponse('046', env('TELEGRAM_CHANNEL_BAKSA_ID', ''));
+
+    }
     public function sendToWestKarbi(Request $request)
     {
           $this->BuildResponse('769', env('TELEGRAM_CHANNEL_WESTKARBI_ID',''));
