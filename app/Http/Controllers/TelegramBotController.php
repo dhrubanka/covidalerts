@@ -69,18 +69,18 @@ class TelegramBotController extends CenterTrackingController
     }
     public function sendToLakhimpur(Request $request)
     {
-        //$this->BuildResponse('063', env('TELEGRAM_CHANNEL_LAKHIMPUR_ID', ''));
-        $this->BuildResponse2('063', env('TELEGRAM_CHANNEL_LAKHIMPUR_ID2', ''));
+        $this->BuildResponse('063', env('TELEGRAM_CHANNEL_LAKHIMPUR_ID', ''));
+        //$this->BuildResponse2('063', env('TELEGRAM_CHANNEL_LAKHIMPUR_ID2', ''));
     }
     public function sendToTinsukia(Request $request)
     {
-        //$this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID', ''));
-        $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID2', ''));
+        $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID', ''));
+       // $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID2', ''));
     }
     public function sendToGolaghat(Request $request)
     {
-        //$this->BuildResponse('053', env('TELEGRAM_CHANNEL_GOLAGHAT_ID', ''));
-        $this->BuildResponse('053', env('TELEGRAM_CHANNEL_GOLAGHAT_ID2', ''));
+        $this->BuildResponse('053', env('TELEGRAM_CHANNEL_GOLAGHAT_ID', ''));
+        //$this->BuildResponse('053', env('TELEGRAM_CHANNEL_GOLAGHAT_ID2', ''));
 
         // Telegram::sendMessage([
         //     'chat_id' =>  env('TELEGRAM_CHANNEL_GOLAGHAT_ID', ''),
@@ -90,8 +90,8 @@ class TelegramBotController extends CenterTrackingController
     }
     public function sendToMajuli(Request $request)
     {
-        //$this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID', ''));
-        $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID2', ''));
+        $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID', ''));
+      //  $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID2', ''));
     }
     public function sendToWestKarbi(Request $request)
     {
@@ -304,11 +304,11 @@ class TelegramBotController extends CenterTrackingController
 
                             array_push($activecenters, $text);
 
-                            Telegram::sendMessage([
-                                'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
-                                'parse_mode' => 'HTML',
-                                'text' => "RESPONSE FROM ".$center->address.""
-                            ]);
+                            // Telegram::sendMessage([
+                            //     'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
+                            //     'parse_mode' => 'HTML',
+                            //     'text' => "RESPONSE FROM ".$center->address.""
+                            // ]);
 
                     }
                 }
@@ -336,11 +336,7 @@ class TelegramBotController extends CenterTrackingController
                     ->where('date', '=', date("Y-m-d", strtotime($somedate->date)))
                     ->update(['capacity' => $somedate->available_capacity]);
 
-                    Telegram::sendMessage([
-                        'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
-                        'parse_mode' => 'HTML',
-                        'text' => "RESPONSE FROM ".$center->address.""
-                    ]);
+
                 }
 
 
@@ -374,133 +370,7 @@ class TelegramBotController extends CenterTrackingController
 
 
     }
-    public function BuildResponse2($districtid, $chatid)
-    {
 
-
-        $response =  Http::withHeaders([
-            'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
-        ])->get(
-            'https://www.cowin.gov.in/api/v2/appointment/sessions/public/calendarByDistrict',
-            [
-                'district_id' => $districtid,
-                'date' => date("d-m-Y"),
-            ]
-        );
-
-        $available_centers = json_decode($response->getBody());
-        //ddd($available_centers);
-        $available_centers = $available_centers->centers;
-
-        //ddd($available_ceanters);
-        $activecenters = array();
-
-        $increments = 0;
-        foreach ($available_centers as $center) {
-
-            $headertext= "<b> Center </b>: ".$center->name ."\n<b>Address </b>: ".$center->address.
-            "\n<b>PIN</b> : ".$center->pincode."\n<b>Fee</b> : ".$center->fee_type."\n\n";
-
-            array_push($activecenters, $headertext);
-
-
-            $infodates = $center->sessions;
-            //ddd($infodates);
-            foreach ($infodates as $somedate) {
-
-                $centerdata =  DB::table('center_trackings')
-                    ->where('centerid', '=', $center->center_id)
-                    ->where('date', '=', date("Y-m-d", strtotime($somedate->date)))
-                    ->get();
-
-                //storing if first entry for the date
-                if ($centerdata->isEmpty()) {
-                    // echo "from null";
-                    //ddd($centerdata);
-                    $this->store(4, $districtid, $center->center_id, $center->name, date("Y-m-d", strtotime($somedate->date)), $somedate->available_capacity);
-
-
-
-                    if ($somedate->available_capacity > 1) {
-                        // if ($somedate->min_age_limit > 44) {
-
-                            $text = $this->contentbuilder(
-                                ++$increments,
-                                $somedate->min_age_limit,
-                                $somedate->date,
-                                $somedate->vaccine,
-                                $somedate->available_capacity,
-                                $somedate->available_capacity_dose1,
-                                $somedate->available_capacity_dose2
-                            );
-
-                            array_push($activecenters, $text);
-                            Telegram::sendMessage([
-                                'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
-                                'parse_mode' => 'HTML',
-                                'text' => "RESPONSE FROM ".$center->address.""
-                            ]);
-
-                    }
-                }
-                //ddd($centerdata);
-                if (($centerdata->isNotEmpty()) && (($somedate->available_capacity > 1) && ($somedate->available_capacity > $centerdata[0]->capacity))) {
-
-
-
-                    // if ($somedate->min_age_limit > 44) {
-
-                        $text = $this->contentbuilder(
-                            ++$increments,
-                            $somedate->min_age_limit,
-                            $somedate->date,
-                            $somedate->vaccine,
-                            $somedate->available_capacity,
-                            $somedate->available_capacity_dose1,
-                            $somedate->available_capacity_dose2
-                        );
-
-                        array_push($activecenters, $text);
-
-                    $affected =  DB::table('center_trackings')
-                    ->where('centerid', '=', $center->center_id)
-                    ->where('date', '=', date("Y-m-d", strtotime($somedate->date)))
-                    ->update(['capacity' => $somedate->available_capacity]);
-
-                    Telegram::sendMessage([
-                        'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
-                        'parse_mode' => 'HTML',
-                        'text' => "RESPONSE FROM ".$center->address.""
-                    ]);
-                }
-
-
-                // ddd($activecenters45);
-
-            }
-              //paste here
-                if($increments>0){
-                array_push(
-                    $activecenters,
-                    "\n\nUpdates From ~ CovidAlerts.online
-                 \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya setu App "
-                );
-
-                Telegram::sendMessage([
-                    'chat_id' => $chatid,
-                    'parse_mode' => 'HTML',
-                    'text' => implode("", $activecenters)
-                ]);
-                $increments = 0;
-
-                }
-                $activecenters = array();
-        }
-
-
-
-
-    }
 
     public function contentbuilder($increments, $min_age_limit, $date, $vaccine, $available_capacity, $dose1,$dose2)
     {
