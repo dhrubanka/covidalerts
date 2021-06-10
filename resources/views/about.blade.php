@@ -45,7 +45,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="#" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
+                <a href="/" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMobileToggle" aria-controls="navBarMobileToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="" role="button" ><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
                 </button>
@@ -54,7 +54,9 @@
                         <li>
                             <a href="/" class="nav-link">HOME</a>
                         </li>
-
+                        <li>
+                            <a href="/alerts" class="nav-link">CHANNELS</a>
+                        </li>
                         <li>
                             <a href="/about" class="nav-link active">ABOUT</a>
                         </li>

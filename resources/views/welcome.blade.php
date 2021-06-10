@@ -34,7 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <title>Covid Alerts - Vaccine Slot Notifications via Telegam</title>
+    <title>Covid Alerts - Assam Vaccine Slot Notifications via Telegam</title>
   </head>
   <body>
 
@@ -42,7 +42,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="#" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
+                <a href="/" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMobileToggle" aria-controls="navBarMobileToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="" role="button" ><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
                 </button>
@@ -51,7 +51,9 @@
                         <li>
                             <a href="/" class="nav-link active">HOME</a>
                         </li>
-
+                        <li>
+                            <a href="/alerts" class="nav-link">CHANNELS</a>
+                        </li>
                         <li>
                             <a href="/about" class="nav-link">ABOUT</a>
                         </li>
@@ -73,8 +75,8 @@
                 <div class="col-sm-12">
                     <h1 style="font-weight:560;">Get Notified in the blink of an eye!</h1>
                     <p>Having trouble scheduling your vaccination appointment???
-                    <br>Don't worry..
-                    <br>Our telegram bot will keep you in the loop.</p>
+                    <br>Don't worry..<br>Our telegram bot will keep you in the loop.
+                    <br>FASTEST Vaccine slot notifications for Assam</p>
                     <br>
                     <!-- data-bs-toggle="modal" data-bs-target="#district-modal" -->
                     <a href="alerts"><button class="joinButton" style="font-weight:900;" >FIND CHANNEL</button></a>

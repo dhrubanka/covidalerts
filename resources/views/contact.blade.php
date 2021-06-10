@@ -46,7 +46,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="#" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
+                <a href="/" class="navbar-brand"> <img id="logo" src="/img/CovidAlertLogo.png" alt="covid-alert-logo"> CovidAlerts</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMobileToggle" aria-controls="navBarMobileToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="" role="button" ><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
                 </button>
@@ -55,7 +55,9 @@
                         <li>
                             <a href="/" class="nav-link">HOME</a>
                         </li>
-
+                        <li>
+                            <a href="/alerts" class="nav-link">CHANNELS</a>
+                        </li>
                         <li>
                             <a href="/about" class="nav-link">ABOUT</a>
                         </li>
@@ -78,6 +80,7 @@
                     <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dhrubanka&ensp;(Creator)</h2>
                     <a href="https://twitter.com/dhrubanka7" target="_blank"><img src="/img/TwitterIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;"></a>
                     <a href="https://www.facebook.com/idhrubanka/" target="_blank"><img src="/img/FacebookIcon.png" alt="twitter_icon" style="width: 35px; height: 35px; margin-right: 2px;" ></a>
+                    <a href="https://www.instagram.com/dhrubanka/" target="_blank"><img src="/img/instagram.png" alt="instagram_icon" style="width: 45px; height: 45px; margin-right: 2px;" ></a>
 
 
                     <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Debayan&ensp;(Team Member)</h2>
