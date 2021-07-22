@@ -75,7 +75,7 @@ class TelegramBotController extends CenterTrackingController
     public function sendToTinsukia(Request $request)
     {
         $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID', ''));
-       // $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID2', ''));
+        // $this->BuildResponse('045', env('TELEGRAM_CHANNEL_TINSUKIA_ID2', ''));
     }
     public function sendToGolaghat(Request $request)
     {
@@ -91,51 +91,43 @@ class TelegramBotController extends CenterTrackingController
     public function sendToMajuli(Request $request)
     {
         $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID', ''));
-      //  $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID2', ''));
+        //  $this->BuildResponse('767', env('TELEGRAM_CHANNEL_MAJULI_ID2', ''));
     }
     public function sendToNagaon(Request $request)
     {
         $this->BuildResponse('056', env('TELEGRAM_CHANNEL_NAGAON_ID', ''));
-
     }
     public function sendToNalbari(Request $request)
     {
         $this->BuildResponse('052', env('TELEGRAM_CHANNEL_NALBARI_ID', ''));
-
     }
     public function sendToDarrang(Request $request)
     {
         $this->BuildResponse('048', env('TELEGRAM_CHANNEL_DARRANG_ID', ''));
-
     }
     public function sendToUdalguri(Request $request)
     {
         $this->BuildResponse('065', env('TELEGRAM_CHANNEL_UDALGURI_ID', ''));
-
     }
     public function sendToCachar(Request $request)
     {
         $this->BuildResponse('066', env('TELEGRAM_CHANNEL_CACHAR_ID', ''));
-
     }
     public function sendToChirang(Request $request)
     {
         $this->BuildResponse('058', env('TELEGRAM_CHANNEL_CHIRANG_ID', ''));
-
     }
     public function sendToBiswanath(Request $request)
     {
         $this->BuildResponse('765', env('TELEGRAM_CHANNEL_BISWANATH_ID', ''));
-
     }
     public function sendToBaksa(Request $request)
     {
         $this->BuildResponse('046', env('TELEGRAM_CHANNEL_BAKSA_ID', ''));
-
     }
     public function sendToWestKarbi(Request $request)
     {
-          $this->BuildResponse('049', env('TELEGRAM_CHANNEL_WESTKARBI_ID',''));
+        $this->BuildResponse('049', env('TELEGRAM_CHANNEL_WESTKARBI_ID', ''));
 
 
         // $response =  Http::withHeaders([
@@ -323,33 +315,33 @@ class TelegramBotController extends CenterTrackingController
         $activecenters = array();
 
         $increments = 0;
-        $covishieldFees = 0; // covishield fees
-        $covaxinFees = 0; // covaxin Fees
+         // covaxin Fees
 
         foreach ($available_centers as $center) {
 
-            $headertext= "<b> Center </b>: ".$center->name ."\n<b>Address </b>: ".$center->address.
-            "\n<b>PIN</b> : ".$center->pincode."\n<b>Fee</b> : ".$center->fee_type."\n\n";
+            $headertext = "<b> Center </b>: " . $center->name . "\n<b>Address </b>: " . $center->address .
+                "\n<b>PIN</b> : " . $center->pincode . "\n<b>Fee</b> : " . $center->fee_type . "\n\n";
 
             array_push($activecenters, $headertext);
 
             $fee = 0;
+            $covishieldFees = 0; // covishield fees
+             $covaxinFees = 0;
             $infodates = $center->sessions;
             //ddd($infodates);
 
-            if(strcmp($center->fee_type, 'Paid') == 0){
+            if (strcmp($center->fee_type, 'Paid') == 0) {
                 $vaccineFees = $center->vaccine_fees;
-                foreach($vaccineFees as $vf){
-                    if(strcmp($vf->vaccine, 'COVISHIELD') == 0)
-                         $covishieldFees = $vf->fee;
-                    if(strcmp($vf->vaccine, 'COVAXIN') == 0){
-                         $covaxinFees = $vf->fee;
-                       //  ddd($covaxinFees);
-                     }
-
+                foreach ($vaccineFees as $vf) {
+                    if (strcmp($vf->vaccine, 'COVISHIELD') == 0)
+                        $covishieldFees = $vf->fee;
+                    if (strcmp($vf->vaccine, 'COVAXIN') == 0) {
+                        $covaxinFees = $vf->fee;
+                        //  ddd($covaxinFees);
+                    }
                 }
-                 //ddd($vaccineFees);
-             }
+                //ddd($vaccineFees);
+            }
 
             foreach ($infodates as $somedate) {
 
@@ -369,34 +361,6 @@ class TelegramBotController extends CenterTrackingController
                     if ($somedate->available_capacity > 1) {
                         // if ($somedate->min_age_limit > 44) {
 
-                            $text = $this->contentbuilder(
-                                ++$increments,
-                                $somedate->min_age_limit,
-                                $somedate->date,
-                                $somedate->vaccine,
-                                $somedate->available_capacity,
-                                $somedate->available_capacity_dose1,
-                                $somedate->available_capacity_dose2,
-                                strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
-                            );
-
-                            array_push($activecenters, $text);
-
-                            // Telegram::sendMessage([
-                            //     'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
-                            //     'parse_mode' => 'HTML',
-                            //     'text' => "RESPONSE FROM ".$center->address.""
-                            // ]);
-
-                    }
-                }
-                //ddd($centerdata);
-                if (($centerdata->isNotEmpty()) && (($somedate->available_capacity > 1) && ($somedate->available_capacity > $centerdata[0]->capacity))) {
-
-
-
-                    // if ($somedate->min_age_limit > 44) {
-
                         $text = $this->contentbuilder(
                             ++$increments,
                             $somedate->min_age_limit,
@@ -410,20 +374,46 @@ class TelegramBotController extends CenterTrackingController
 
                         array_push($activecenters, $text);
 
+                        // Telegram::sendMessage([
+                        //     'chat_id' =>  env('TELEGRAM_CHANNEL_DEBUG',''),
+                        //     'parse_mode' => 'HTML',
+                        //     'text' => "RESPONSE FROM ".$center->address.""
+                        // ]);
+
+                    }
+                }
+                //ddd($centerdata);
+                if (($centerdata->isNotEmpty()) && (($somedate->available_capacity > 1) && ($somedate->available_capacity > $centerdata[0]->capacity))) {
+
+
+
+                    // if ($somedate->min_age_limit > 44) {
+
+                    $text = $this->contentbuilder(
+                        ++$increments,
+                        $somedate->min_age_limit,
+                        $somedate->date,
+                        $somedate->vaccine,
+                        $somedate->available_capacity,
+                        $somedate->available_capacity_dose1,
+                        $somedate->available_capacity_dose2,
+                        strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
+                    );
+
+                    array_push($activecenters, $text);
+
                     $affected =  DB::table('center_trackings')
-                    ->where('centerid', '=', $center->center_id)
-                    ->where('date', '=', date("Y-m-d", strtotime($somedate->date)))
-                    ->update(['capacity' => $somedate->available_capacity]);
-
-
+                        ->where('centerid', '=', $center->center_id)
+                        ->where('date', '=', date("Y-m-d", strtotime($somedate->date)))
+                        ->update(['capacity' => $somedate->available_capacity]);
                 }
 
 
                 // ddd($activecenters45);
 
             }
-              //paste here
-                if($increments>0){
+            //paste here
+            if ($increments > 0) {
                 array_push(
                     $activecenters,
                     "\n\nUpdates From ~ CovidAlerts.online
@@ -436,24 +426,14 @@ class TelegramBotController extends CenterTrackingController
                     'text' => implode("", $activecenters)
                 ]);
                 $increments = 0;
-
-
-
-
-
-                }
-                $activecenters = array();
+            }
+            $activecenters = array();
         }
-
-
-
-
     }
 
 
-    public function contentbuilder($increments, $min_age_limit, $date, $vaccine, $available_capacity, $dose1,$dose2, $fee)
+    public function contentbuilder($increments, $min_age_limit, $date, $vaccine, $available_capacity, $dose1, $dose2, $fee)
     {
-
         return "" . $increments . ". "
             . "<b>Age Group : </b>"
             . $min_age_limit
