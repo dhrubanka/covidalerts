@@ -135,7 +135,7 @@ class TelegramBotController extends CenterTrackingController
     }
     public function sendToWestKarbi(Request $request)
     {
-          $this->BuildResponse('769', env('TELEGRAM_CHANNEL_WESTKARBI_ID',''));
+          $this->BuildResponse('049', env('TELEGRAM_CHANNEL_WESTKARBI_ID',''));
 
 
         // $response =  Http::withHeaders([
@@ -152,9 +152,12 @@ class TelegramBotController extends CenterTrackingController
         // //ddd($available_centers);
         // $available_centers = $available_centers->centers;
 
+        // $covishieldFees = 0; // covishield fees
+        // $covaxinFees = 0; // covaxin Fees
+
         // //ddd($available_ceanters);
         // $activecenters = array();
-        // $activecenters18 = ["Notification for West KAArbi 18\n"];
+        // $activecenters18 = ["Notification Test: guwahati 18\n"];
         // $increments = 0;
         // foreach ($available_centers as $center) {
 
@@ -166,6 +169,20 @@ class TelegramBotController extends CenterTrackingController
         //     // var_dump($center->center_id);
         //     // ddd($center);
         //     $infodates = $center->sessions;
+
+        //     if(strcmp($center->fee_type, 'Paid') == 0){
+        //        $vaccineFees = $center->vaccine_fees;
+        //        foreach($vaccineFees as $vf){
+        //            if(strcmp($vf->vaccine, 'COVISHIELD') == 0)
+        //                 $covishieldFees = $vf->fee;
+        //            if(strcmp($vf->vaccine, 'COVAXIN') == 0){
+        //                 $covaxinFees = $vf->fee;
+        //               //  ddd($covaxinFees);
+        //             }
+
+        //        }
+        //         //ddd($vaccineFees);
+        //     }
         //     //ddd($infodates);
         //     foreach ($infodates as $somedate) {
 
@@ -192,7 +209,8 @@ class TelegramBotController extends CenterTrackingController
         //                         $somedate->vaccine,
         //                         $somedate->available_capacity,
         //                         $somedate->available_capacity_dose1,
-        //                         $somedate->available_capacity_dose2
+        //                         $somedate->available_capacity_dose2,
+        //                         strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
         //                     );
 
         //                     array_push($activecenters, $text);
@@ -226,7 +244,8 @@ class TelegramBotController extends CenterTrackingController
         //                     $somedate->vaccine,
         //                     $somedate->available_capacity,
         //                     $somedate->available_capacity_dose1,
-        //                     $somedate->available_capacity_dose2
+        //                     $somedate->available_capacity_dose2,
+        //                     strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
         //                 );
 
         //                 array_push($activecenters, $text);
@@ -304,6 +323,9 @@ class TelegramBotController extends CenterTrackingController
         $activecenters = array();
 
         $increments = 0;
+        $covishieldFees = 0; // covishield fees
+        $covaxinFees = 0; // covaxin Fees
+
         foreach ($available_centers as $center) {
 
             $headertext= "<b> Center </b>: ".$center->name ."\n<b>Address </b>: ".$center->address.
@@ -311,9 +333,24 @@ class TelegramBotController extends CenterTrackingController
 
             array_push($activecenters, $headertext);
 
-
+            $fee = 0;
             $infodates = $center->sessions;
             //ddd($infodates);
+
+            if(strcmp($center->fee_type, 'Paid') == 0){
+                $vaccineFees = $center->vaccine_fees;
+                foreach($vaccineFees as $vf){
+                    if(strcmp($vf->vaccine, 'COVISHIELD') == 0)
+                         $covishieldFees = $vf->fee;
+                    if(strcmp($vf->vaccine, 'COVAXIN') == 0){
+                         $covaxinFees = $vf->fee;
+                       //  ddd($covaxinFees);
+                     }
+
+                }
+                 //ddd($vaccineFees);
+             }
+
             foreach ($infodates as $somedate) {
 
                 $centerdata =  DB::table('center_trackings')
@@ -339,7 +376,8 @@ class TelegramBotController extends CenterTrackingController
                                 $somedate->vaccine,
                                 $somedate->available_capacity,
                                 $somedate->available_capacity_dose1,
-                                $somedate->available_capacity_dose2
+                                $somedate->available_capacity_dose2,
+                                strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
                             );
 
                             array_push($activecenters, $text);
@@ -366,7 +404,8 @@ class TelegramBotController extends CenterTrackingController
                             $somedate->vaccine,
                             $somedate->available_capacity,
                             $somedate->available_capacity_dose1,
-                            $somedate->available_capacity_dose2
+                            $somedate->available_capacity_dose2,
+                            strcmp($somedate->vaccine, 'COVISHIELD') == 0 ? $covishieldFees : $covaxinFees
                         );
 
                         array_push($activecenters, $text);
@@ -412,7 +451,7 @@ class TelegramBotController extends CenterTrackingController
     }
 
 
-    public function contentbuilder($increments, $min_age_limit, $date, $vaccine, $available_capacity, $dose1,$dose2)
+    public function contentbuilder($increments, $min_age_limit, $date, $vaccine, $available_capacity, $dose1,$dose2, $fee)
     {
 
         return "" . $increments . ". "
@@ -428,6 +467,8 @@ class TelegramBotController extends CenterTrackingController
             . $dose1
             . "\n<b>Dose 2  : </b>"
             . $dose2
+            . "\n<b>Fee  : Rs </b>"
+            . $fee
             . "\n\n ";
     }
 }
