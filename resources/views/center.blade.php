@@ -15,7 +15,7 @@
     <meta itemprop="image" content="https://covidalerts.online/img/center.png">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://covidalerts.online/centers">
+    <meta property="og:url" content="https://covidalerts.online">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CovidAlerts">
     <meta property="og:description" content="Telegram notification bot">
