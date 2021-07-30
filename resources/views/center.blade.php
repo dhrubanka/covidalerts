@@ -7,25 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <meta name="description" content="Telegram notification bot">
+    <meta name="description" content="Assam Active Covid Center List">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="CovidAlerts">
     <meta itemprop="description" content="Telegram notification bot">
-    <meta itemprop="image" content="https://covidalerts.online/img/seoalerts.png">
+    <meta itemprop="image" content="https://covidalerts.online/img/center.png">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://covidalerts.online">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CovidAlerts">
     <meta property="og:description" content="Telegram notification bot">
-    <meta property="og:image" content="https://covidalerts.online/img/seoalerts.png">
+    <meta property="og:image" content="https://covidalerts.online/img/center.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CovidAlerts">
     <meta name="twitter:description" content="Telegram notification bot">
-    <meta name="twitter:image" content="https://covidalerts.online/img/seoalerts.png">
+    <meta name="twitter:image" content="https://covidalerts.online/img/center.png">
 
 
     <!-- Bootstrap CSS -->
