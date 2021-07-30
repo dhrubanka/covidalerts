@@ -55,6 +55,9 @@
                             <a href="/alerts" class="nav-link">CHANNELS</a>
                         </li>
                         <li>
+                            <a href="/centers" class="nav-link">CENTERS</a>
+                        </li>
+                        <li>
                             <a href="/about" class="nav-link">ABOUT</a>
                         </li>
 
@@ -80,6 +83,7 @@
                     <br>
                     <!-- data-bs-toggle="modal" data-bs-target="#district-modal" -->
                     <a href="alerts"><button class="joinButton" style="font-weight:900;" >FIND CHANNEL</button></a>
+                    <a href="centers"><button class="joinButton" style="font-weight:900;" >FIND Active Centers</button></a>
                 </div>
             </div>
         </div>

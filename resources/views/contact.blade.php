@@ -59,6 +59,9 @@
                             <a href="/alerts" class="nav-link">CHANNELS</a>
                         </li>
                         <li>
+                            <a href="/centers" class="nav-link">CENTERS</a>
+                        </li>
+                        <li>
                             <a href="/about" class="nav-link">ABOUT</a>
                         </li>
 

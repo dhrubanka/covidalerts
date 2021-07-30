@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TelegramBotController;
+use App\Http\Controllers\OfflineCenterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/centers',[OfflineCenterController::class, 'index']);
+Route::get('/list/{id}',[OfflineCenterController::class, 'getList']);
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,6 +58,7 @@ Route::get('/send-nagaon', [TelegramBotController::class, 'sendToNagaon']);
 
 
 Route::get('/send-westkarbi', [TelegramBotController::class, 'sendToWestKarbi']);
+
 
 
 
