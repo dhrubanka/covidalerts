@@ -152,9 +152,14 @@
             $(document).ready(function () {
                 $("#search").click(function (e) {
                     var id = $('#centerdropdown').val();
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
                     $.ajax({
                         type: "GET",
-                        url: "http://covidalerts.online/list/" + id,
+                        url: "https://covidalerts.online/list/" + id,
                         dataType: "json",
                         success: function (result,status,xhr) {
                             $('#tobeattached').empty();
