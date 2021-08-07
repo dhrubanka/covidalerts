@@ -40,7 +40,7 @@
 
     <title>Covid Alerts | Centers Page</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -89,7 +89,7 @@
 
             <div id="card-container" class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9">
                         <div class="card card-margin">
                             <div class="card-header no-border">
                                 <!-- <h5 class="card-title">MOM</h5> -->
@@ -105,16 +105,19 @@
                                         </div>
                                         <div class="card-info">
                                             <span class="info-title">Get List of Active Centers for your District</span>
-                                            <span class="info-update">Center list are gathered from the COWIN API, may be helpful in finding Offline Centers</span>
+                                            <span class="info-update">Center list are gathered from the COWIN API, may
+                                                be helpful in finding Offline Centers</span>
                                         </div>
                                     </div>
                                     <ul class="card-ul-list" style="list-style-type: none; padding: 10px;">
                                         <li class="card-list"><span>
-                                                <select id="centerdropdown" class="form-select" aria-label="Default select example"
+                                                <select id="centerdropdown" class="form-select"
+                                                    aria-label="Default select example"
                                                     onchange="setUnderLink(this.value)">
                                                     <option selected value="">Select your district </option>
-                                                    @foreach ( $districts as $district )
-                                                        <option value="{{$district->district_id}}">{{$district->district_name}}</option>
+                                                    @foreach ($districts as $district)
+                                                        <option value="{{ $district->district_id }}">
+                                                            {{ $district->district_name }}</option>
                                                     @endforeach
 
                                                 </select>
@@ -127,20 +130,30 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div  id="tobeattached">
-
-                                                <!-- <h5 class="card-title" style="color: black;">Above 45 Channels</h5> -->
-
-                                </div>
-                            </div>
+                        <div class="col-lg-3">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
+                                                        crossorigin="anonymous"></script>
+                            <!-- centersAd -->
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3220759980765359"
+                                data-ad-slot="6934726514" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                         </div>
 
                     </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="tobeattached">
+
+                                <!-- <h5 class="card-title" style="color: black;">Above 45 Channels</h5> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+
     </section>
     <!-- Alert Card End-Region -->
 
@@ -150,50 +163,58 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                $("#search").click(function (e) {
-                    var id = $('#centerdropdown').val();
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-                    $.ajax({
-                        type: "GET",
-                        url: "https://covidalerts.online/list/" + id,
-                        dataType: "json",
-                        success: function (result,status,xhr) {
-                            $('#tobeattached').empty();
-                            var items ='<div style="margin:1em;"> Total ' + result.length + ' centers are available.. </div>';
-                            $('#tobeattached').append(items);
-                            for(var key in result){
-                                var out='<div class="card card-margin">';
-                                    out=' <div class="card-body pt-0">';
-                                    out='<div class="card-body-widget">';
-                                    out='  <div class="card-title-wrapper" >">';
-                                    out=' <div class="card-info" style="padding: 1em">';
-                                    out+='<h4 id="centername" class="info-title">CENTER : &nbsp'+result[key].name+' </h4>';
-                                    out+=' <h6 class="info-title mb-2">Date : &nbsp'+result[key].sessions[0].date+' </h6>';
-                                    out+=' <h6 class="info-title mb-2">Vaccine :&nbsp'+result[key].sessions[0].vaccine+' </h6>';
-                                    out+=' <h6 class="info-title mb-2">Age :&nbsp'+result[key].sessions[0].min_age_limit+' </h6>';
-                                    out+=' <h6 class="info-title mb-2">Fee :&nbsp'+result[key].fee_type+' </h6>';
-                                    out+=' <h6 class="info-title mb-2">PIN :&nbsp'+result[key].pincode+' </h6>';
-                                    out+=' <p class="info-title ">Address :&nbsp'+result[key].address+' </p>';
-                                    out+='</div>';
-                                    out+='</div>';
-                                    out+='</div>';
-                                    out+='</div>';
-                                    out+='</div>';
-                                    $('#tobeattached').append(out);
+    <script>
+        $(document).ready(function() {
+            $("#search").click(function(e) {
+                var id = $('#centerdropdown').val();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "https://covidalerts.online/list/" + id,
+                    dataType: "json",
+                    success: function(result, status, xhr) {
+                        $('#tobeattached').empty();
+                        var items = '<div style="margin:1em;"> Total ' + result.length +
+                            ' centers are available.. </div>';
+                        $('#tobeattached').append(items);
+                        for (var key in result) {
+                            var out = '<div class="card card-margin">';
+                            out = ' <div class="card-body pt-0">';
+                            out = '<div class="card-body-widget">';
+                            out = '  <div class="card-title-wrapper" >">';
+                            out = ' <div class="card-info" style="padding: 1em">';
+                            out += '<h4 id="centername" class="info-title">CENTER : &nbsp' +
+                                result[key].name + ' </h4>';
+                            out += ' <h6 class="info-title mb-2">Date : &nbsp' + result[key]
+                                .sessions[0].date + ' </h6>';
+                            out += ' <h6 class="info-title mb-2">Vaccine :&nbsp' + result[key]
+                                .sessions[0].vaccine + ' </h6>';
+                            out += ' <h6 class="info-title mb-2">Age :&nbsp' + result[key]
+                                .sessions[0].min_age_limit + ' </h6>';
+                            out += ' <h6 class="info-title mb-2">Fee :&nbsp' + result[key]
+                                .fee_type + ' </h6>';
+                            out += ' <h6 class="info-title mb-2">PIN :&nbsp' + result[key]
+                                .pincode + ' </h6>';
+                            out += ' <p class="info-title ">Address :&nbsp' + result[key]
+                                .address + ' </p>';
+                            out += '</div>';
+                            out += '</div>';
+                            out += '</div>';
+                            out += '</div>';
+                            out += '</div>';
+                            $('#tobeattached').append(out);
 
 
-                            }
                         }
-                    });
+                    }
                 });
             });
-        </script>
+        });
+    </script>
     <script>
         //Form-Select onChange Functions
         //--------------------------------------------------------------------

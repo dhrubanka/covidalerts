@@ -39,6 +39,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <title>Covid Alerts | Alerts Page</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -86,7 +88,7 @@
 
             <div id="card-container" class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9">
                         <div class="card card-margin">
                             <div class="card-header no-border">
                                 <!-- <h5 class="card-title">MOM</h5> -->
@@ -101,7 +103,8 @@
                                                 style="width: 50px; height: 50px;">
                                         </div>
                                         <div class="card-info">
-                                            <span class="info-title">Telegram Notification Channel for All age groups </span>
+                                            <span class="info-title">Telegram Notification Channel for All age groups
+                                            </span>
                                             <span class="info-update">More Districts to be added soon</span>
                                         </div>
                                     </div>
@@ -150,10 +153,18 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-3">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
+                                                        crossorigin="anonymous"></script>
+                            <!-- centersAd -->
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3220759980765359"
+                                data-ad-slot="6934726514" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
 
-
-{{--
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-lg-12">
                                 <div class="card card-margin">
                                     <div class="card-header no-border">
