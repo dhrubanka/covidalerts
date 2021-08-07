@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Telegram notification bot">
+    <meta name="description" content="Telegram notification bot | Covid Alerts Assam">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="CovidAlerts">
-    <meta itemprop="description" content="Telegram notification bot">
+    <meta itemprop="description" content="Telegram notification bot  | Covid Alerts Assam">
     <meta itemprop="image" content="https://covidalerts.online/img/seohome.png">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://covidalerts.online">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CovidAlerts">
-    <meta property="og:description" content="Telegram notification bot">
+    <meta property="og:description" content="Telegram notification bot  | Covid Alerts Assam">
     <meta property="og:image" content="https://covidalerts.online/img/seohome.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CovidAlerts">
-    <meta name="twitter:description" content="Telegram notification bot">
+    <meta name="twitter:description" content="Telegram notification bot  | Covid Alerts Assam">
     <meta name="twitter:image" content="https://covidalerts.online/img/seohome.png">
 
     <!-- Bootstrap CSS -->
@@ -38,7 +38,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
      crossorigin="anonymous"></script>
-     
+
   </head>
   <body>
 

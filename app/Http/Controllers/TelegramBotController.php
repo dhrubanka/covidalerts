@@ -127,7 +127,7 @@ class TelegramBotController extends CenterTrackingController
     }
     public function sendToWestKarbi(Request $request)
     {
-        $this->BuildResponse('045', env('TELEGRAM_CHANNEL_WESTKARBI_ID', ''));
+        $this->BuildResponse('043', env('TELEGRAM_CHANNEL_WESTKARBI_ID', ''));
 
 
         // $response =  Http::withHeaders([
