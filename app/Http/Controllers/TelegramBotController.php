@@ -127,7 +127,7 @@ class TelegramBotController extends CenterTrackingController
     }
     public function sendToWestKarbi(Request $request)
     {
-        $this->BuildResponse('049', env('TELEGRAM_CHANNEL_WESTKARBI_ID', ''));
+        $this->BuildResponse('045', env('TELEGRAM_CHANNEL_WESTKARBI_ID', ''));
 
 
         // $response =  Http::withHeaders([
@@ -416,8 +416,11 @@ class TelegramBotController extends CenterTrackingController
             if ($increments > 0) {
                 array_push(
                     $activecenters,
-                    "\n\nUpdates From ~ CovidAlerts.online
-                 \n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya setu App "
+                    " \n\n Book here : \n1. https://selfregistration.cowin.gov.in/ \n2. Aarogya setu App
+                    \nSearch Active Centers: \n CovidAlerts.online/centers
+                    \n Update from CovidAlerts
+                    "
+
                 );
 
                 Telegram::sendMessage([
