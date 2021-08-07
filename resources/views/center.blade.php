@@ -39,6 +39,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <title>Covid Alerts | Centers Page</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
