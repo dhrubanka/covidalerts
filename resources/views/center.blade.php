@@ -89,7 +89,7 @@
 
             <div id="card-container" class="container">
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-lg-12">
                         <div class="card card-margin">
                             <div class="card-header no-border">
                                 <!-- <h5 class="card-title">MOM</h5> -->
@@ -130,6 +130,18 @@
                                 </div>
                             </div>
                         </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div id="tobeattached">
+
+                                <!-- <h5 class="card-title" style="color: black;">Above 45 Channels</h5> -->
+
+                            </div>
+                        </div>
                         <div class="col-lg-3">
                             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3220759980765359"
                                                         crossorigin="anonymous"></script>
@@ -139,17 +151,6 @@
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div id="tobeattached">
-
-                                <!-- <h5 class="card-title" style="color: black;">Above 45 Channels</h5> -->
-
-                            </div>
                         </div>
                     </div>
 
