@@ -82,8 +82,7 @@
                 <div class="col-sm-12">
                     <h1 style="font-weight:560;">Get Notified in the blink of an eye!</h1>
                     <p>Having trouble scheduling your vaccination appointment???
-                    <br>Don't worry..<br>Our telegram bot will keep you in the loop.
-                    <br>FASTEST Vaccine slot notifications for Assam</p>
+                    <br>Don't worry..<br>Our telegram bot will keep you in the loop. 
                     <br>
                     <!-- data-bs-toggle="modal" data-bs-target="#district-modal" -->
                     <a href="alerts"><button class="joinButton" style="font-weight:900;" >FIND CHANNEL</button></a>
