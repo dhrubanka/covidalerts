@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="Telegram notification bot | Covid Alerts Assam">
-
+    <meta name="google-site-verification" content="NvV80na4UmHkQJYQXr7ute10zp5JYp_gqWmWPM99p-k" />
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="CovidAlerts">
     <meta itemprop="description" content="Telegram notification bot  | Covid Alerts Assam">
