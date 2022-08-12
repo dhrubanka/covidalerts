@@ -8,6 +8,6 @@ Developed a web server that calls Cowin API and gives real time updates to the t
 
 ![alt text]('https://github.com/dhrubanka/covidalerts/blob/media/Real Love.mp4')
 
-![](https://raw.githubusercontent.com/dhrubanka/covidalerts/master/Real Love.mp4)
+![](https://raw.githubusercontent.com/dhrubanka/covidalerts/master/rl.mp4)
 
 
