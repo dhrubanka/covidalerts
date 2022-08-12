@@ -5,6 +5,7 @@ Developed a web server that calls Cowin API and gives real time updates to the t
 # Tools
 
 Framework - [Laravel](https://www.laravel.com) | [php](www.php.net)
+
 API- [Cowin API](https://apisetu.gov.in/api/cowin/cowin-public-v2) | [Telegram API](https://core.telegram.org/bots)
  
 # Screenshots
